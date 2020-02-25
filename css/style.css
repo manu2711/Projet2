@@ -1,0 +1,245 @@
+/* Intégration des polices de caractères */
+@font-face {
+    font-family: 'ambleregular';
+    src: url('../fonts/Amble-Regular-webfont.eot'),
+        url('../fonts/Amble-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Amble-Regular-webfont.woff') format('woff'),
+        url('../fonts/Amble-Regular-webfont.ttf') format('truetype'),
+        url('../fonts/Amble-Regular-webfont.svg#ambleregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Classes Utilitaires*/
+.bold {
+    font-weight: bold;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+/* Layout de page */
+body {
+	font-family: ambleregular, arial, serif;
+	background-color: rgb(33,33,33);
+    color: rgb(33,33,33);
+    margin: 0;
+    padding: 0;
+}
+
+#main_wrapper {
+	width: 1180px;
+	background-color: white;
+	border: 1px solid rgb(59,169,223);
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+}
+
+aside{
+	width: 550px;
+ 	background-color: rgb(152,213,235);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Elements HTML globaux */
+h1 {
+	font-size: 400%;
+	font-weight: normal;
+	margin-bottom: 10px;
+    color: black;
+}
+h1 span {
+	color: rgb(59,169,223);
+}
+
+h2 {
+	margin: 0 0 100px 0;
+	font-size: 1.5rem;
+	padding-bottom: 4px;
+	background: url(../images/border.png) no-repeat bottom left;
+}
+
+h3 {
+    color: black;
+	border-bottom: 2px solid rgb(59,169,223);
+	font-size: 1.6rem;
+	padding: 6px 0 6px 0;
+}
+
+img {
+    border-radius: 50%;
+    margin: 30px;
+    width: 50%;
+    max-width: 200px;
+    height: auto;
+}
+
+p{
+	margin: 0;
+}
+
+/* Elements de Aside*/
+.info header {
+    height: 36px;
+    background-color: rgb(33,33,33);
+	color: rgb(59,169,223);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.info:nth-child(3) {
+    flex: 1;
+ }
+
+.sub_info {
+    margin: 20px 35px 20px 35px;
+}
+.sub_info p {
+    margin-bottom: 6px;
+}
+.sub_info p:nth-last-child(1) {
+    margin-bottom: 0;
+}
+
+.hobby {
+     display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.contact {
+    margin-bottom: 10px;
+}
+
+.icon_a {
+    width: 3vw;
+    height: 3vw;
+    border: 2px solid rgb(33,33,33);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    margin: 0 12px 0 12px;
+}
+
+/* Elements du main*/
+#parcours {
+    margin: 10% 6% 7% 7%;
+}
+
+.icon_b {
+	color: rgb(59,169,223);
+	margin-right: 20px;
+}
+
+.entry {
+	margin: 0 0 20px 0;
+	display: flex;
+	flex-direction: row;
+}
+
+.date_city {
+	width: 30%;
+    font-weight: bold;
+}
+.date_city span {
+    display: none;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.description {
+	flex: 1;
+}
+
+.title {
+	margin-top: 0;
+	margin-bottom: 2px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.sub_title {
+	margin-top: 6px;
+	margin-bottom: 6px;
+	font-size: 1rem;
+	font-weight: normal;
+}
+
+.bloc_reco {
+    display: flex;
+    flex-direction: row;
+}
+
+.reco {
+    width: 50%;
+    width: 50%;
+}
+
+/* @media queries */
+@media screen and (max-width: 1180px) {
+	#main_wrapper {
+	    width: auto;
+    }
+
+    aside {
+	    width: 30%;
+    }
+    main {
+        flex: 1;
+    }
+}
+
+@media screen and (max-width: 980px) {
+	#main_wrapper {
+	    width: auto;
+	    flex-wrap: wrap;
+    }
+
+    aside {
+	    width: auto;
+    }
+
+    .entry {
+        flex-wrap: wrap;
+        width: auto;
+        margin-bottom: 30px;
+    }
+
+    .date_city {
+        width: 100%;
+        margin-bottom: 12px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .date_city span {
+        display: block;
+    }
+
+    .description {
+        width: 100%;
+        flex: none;
+    }
+
+    .bloc_reco {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .reco {
+        width: auto;
+        margin-bottom: 12px;
+    }
+}
