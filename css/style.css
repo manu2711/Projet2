@@ -122,14 +122,14 @@ p{
 }
 
 .icon_a {
-    width: 3vw;
-    height: 3vw;
+    width: 3rem;
+    height: 3rem;
     border: 2px solid rgb(33,33,33);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2vw;
+    font-size: 2rem;
     margin: 0 12px 0 12px;
 }
 
@@ -195,10 +195,10 @@ p{
 .bloc_reco {
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
 }
 
 .reco {
-    width: 50%;
     width: 50%;
 }
 
@@ -218,7 +218,7 @@ p{
 
 @media screen and (max-width: 980px) {
     #parcours {
-        margin: auto 0.5rem;
+        margin: auto 0.8rem;
     }
 	#main_wrapper {
 	    width: auto;
@@ -254,12 +254,14 @@ p{
     }
 
     .bloc_reco {
+        display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
     }
 
     .reco {
-        width: auto;
+        min-width: 240px;
+        flex: 1;
         margin-bottom: 12px;
     }
 }
