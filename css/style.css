@@ -143,10 +143,25 @@ p{
 	margin-right: 20px;
 }
 
+.icon_c {
+    color: rgb(59,169,223);
+    font-size: 1rem;
+}
+
+.icon_d {
+    color: rgb(59,169,223);
+}
+
 .entry {
 	margin: 0 0 20px 0;
 	display: flex;
 	flex-direction: row;
+}
+
+.bullet {
+    width: 1.5rem;
+    font-size: 0.6rem;
+    padding-top: 0.1rem;
 }
 
 .date_city {
